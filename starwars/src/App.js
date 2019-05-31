@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import StarWarCharacterList from './components/StartWarCharacterList'
+import Spinner from './components/UI/Spinner/Spinner'
+import spinner from './components/UI/Spinner/Spinner';
 
 class App extends Component {
   constructor() {
@@ -32,10 +34,15 @@ class App extends Component {
   };
 
   render() {
+    let dataToRender = <Spinner />;
+
+    if (this.state.starwarsChars.length) {
+      dataToRender = <StarWarCharacterList starWarCharacters={this.state.starwarsChars} />
+    }
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
-     {this.state.starwarsChars.length && <StarWarCharacterList data={this.state.starwarsChars} />} 
+          { dataToRender} 
       </div>
     );
   }
