@@ -25,12 +25,25 @@ In this challenge, create a web page that presents a styled list of Star Wars ch
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+ 
+ #Answer
+  - ReactJS is an open-source Javascript library for building highly interactive user interfaces especially for single page applications. 
+  - The problem it tries to solve in addition to making it easier to building single page applications is that it allows an entire application to be broken down into re-usable components and hence drastically reducing repetitions and redundancy in the codebase.
+  - It makes it easier for the application to be tested and improves the overall performance of the application.
+  - It complies to the DRY principle in building a software.
 
 - [ ] What does it mean to _think_ in react?
 
+ #Answer
+  - To think in React means to think of everything as a piece of re-usable component.
+
 - [ ] Describe state.
+  
+#Answer
+ - A state is an object which determines the behaviour of a component and how it's rendered.
 
 - [ ] Describe props.
+  - props is the properties of a component, it's that data that a child component expects from a parent component.
 
 ## Project Set Up
 
