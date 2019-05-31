@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import './App.css';
 import StarWarCharacterList from './components/StartWarCharacterList'
 import Spinner from './components/UI/Spinner/Spinner'
-import spinner from './components/UI/Spinner/Spinner';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
     };
   }
 
@@ -25,19 +24,18 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        console.log(data.results)
         this.setState({ starwarsChars: data.results });
       })
       .catch(err => {
-        throw new Error(err);
+        alert('Oops, internal sever error')
       });
   };
-
   render() {
     let dataToRender = <Spinner />;
-
     if (this.state.starwarsChars.length) {
-      dataToRender = <StarWarCharacterList starWarCharacters={this.state.starwarsChars} />
+      dataToRender = (<StarWarCharacterList 
+      starWarCharacters={this.state.starwarsChars} 
+      />)
     }
     return (
       <div className="App">
