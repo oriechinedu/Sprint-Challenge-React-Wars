@@ -1,0 +1,15 @@
+.character {
+  list-style: none;
+  padding: 0.8rem;
+  color: white;
+}
+
+.character details summary{
+  outline:none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.character details p {
+  font-size: 1.6rem;
+}
