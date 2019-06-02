@@ -7,7 +7,7 @@ export default function starWar({ character}) {
     <li className="character"
     >
       <details>
-        <summary style={style}> <strong>Name:</strong> {character.name}</summary>
+        <summary style={style}>{character.name}</summary>
          <p><strong>Eye Color: </strong> {character.eye_color}</p>
          <p><strong>Gender:</strong> {character.gender}</p>
          <p><strong>Height:</strong> {character.height}</p>
