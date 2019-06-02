@@ -25,13 +25,13 @@ const App = () => {
         return res.json();
       })
       .then(data => {
-        setState({
-          ...state,
+        setState(prevState => ({
+          ...prevState,
           starwarsChars: data.results, previous: data.previous, next: data.next
-        });
+        }));
       })
       .catch(err => {
-        //
+        alert(err.message)
       });
   };
   const handlePagination = (event) => {
